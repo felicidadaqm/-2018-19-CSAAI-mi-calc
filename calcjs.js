@@ -1,51 +1,159 @@
 function main() {
   console.log("Que comiencen los juegos de JS");
 
-  var numeros = []
-  var operando = ""
-  var boton1 = document.getElementById("boton1");
-  var boton2 = document.getElementById("boton2");
-  var boton3 = document.getElementById("boton3");
-  var botonsum = document.getElementById("suma");
-  var botonequal = document.getElementById("igual");
+  var operation_arr = [];
+  var num = "";
+  var operation = "";
+  var showdisplay = "";
+  var boton1 = document.getElementById("1");
+  var boton2 = document.getElementById("2");
+  var boton3 = document.getElementById("3");
+  var boton4 = document.getElementById("4");
+  var boton5 = document.getElementById("5");
+  var boton6 = document.getElementById("6");
+  var boton7 = document.getElementById("7");
+  var boton8 = document.getElementById("8");
+  var boton9 = document.getElementById("9");
+  var boton0 = document.getElementById("0");
+
+  var suma = document.getElementById("+");
+  var resta = document.getElementById("-");
+  var mult = document.getElementById("*");
+  var divi = document.getElementById("/");
+  var botonequal = document.getElementById("=");
 
 
   boton1.onclick = () => {
     console.log("Click");
-    operando = operando + "1";
-
+    var valor = document.getElementById("1").value;
     var display = document.getElementById("display");
-    display.innerHTML = operando
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
   }
 
   boton2.onclick = () => {
     console.log("Click2");
-    operando = operando + "2";
-
+    var valor = document.getElementById("2").value;
     var display = document.getElementById("display");
-    display.innerHTML = operando
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
   }
 
   boton3.onclick = () => {
     console.log("Click3");
-    operando = operando + "3";
-
+    var valor = document.getElementById("3").value;
     var display = document.getElementById("display");
-    display.innerHTML = operando
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
   }
 
-  botonsum.onclick = () => {
-    console.log("Suma");
-    operando =  operando + "+";
+  boton4.onclick = () => {
+    var valor = document.getElementById("4").value;
     var display = document.getElementById("display");
-    display.innerHTML = operando;
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
 
+  boton5.onclick = () => {
+    var valor = document.getElementById("5").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
+  boton6.onclick = () => {
+    var valor = document.getElementById("6").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
+  boton7.onclick = () => {
+    var valor = document.getElementById("7").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
+  boton8.onclick = () => {
+    var valor = document.getElementById("8").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
+  boton9.onclick = () => {
+    var valor = document.getElementById("9").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
+  boton0.onclick = () => {
+    var valor = document.getElementById("0").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
+  suma.onclick = () => {
+    console.log("Suma");
+    var operation = document.getElementById("+").value;
+    var display = document.getElementById("display");
+    showdisplay = showdisplay + operation;
+    operation_arr.push(num);
+    operation_arr.push(operation);
+    num = "";
+    console.log(operation_arr);
+    display.innerHTML = showdisplay;
+  }
+
+  resta.onclick = () => {
+    console.log("Resta");
+    var operation = document.getElementById("-").value;
+    var display = document.getElementById("display");
+    showdisplay = showdisplay + operation;
+    operation_arr.push(num);
+    operation_arr.push(operation);
+    num = "";
+    console.log(operation_arr);
+    display.innerHTML = showdisplay;
+  }
+
+  mult.onclick = () => {
+    console.log("Multiplicación");
+    var operation = document.getElementById("*").value;
+    var display = document.getElementById("display");
+    showdisplay = showdisplay + operation;
+    operation_arr.push(num);
+    operation_arr.push(operation);
+    num = "";
+    console.log(operation_arr);
+    display.innerHTML = showdisplay;
+  }
+
+  divi.onclick = () => {
+    console.log("Multiplicación");
+    var operation = document.getElementById("/").value;
+    var display = document.getElementById("display");
+    showdisplay = showdisplay + operation;
+    operation_arr.push(num);
+    operation_arr.push(operation);
+    num = "";
+    console.log(operation_arr);
+    display.innerHTML = showdisplay;
   }
 
   botonequal.onclick = () => {
     console.log("Igual");
-    numeros.push(operando);
+    operation_arr.push(num);
+    console.log(operation_arr)
     var display = document.getElementById("display");
-    console.log(numeros)
   }
+
+  var operadores = ["+", "-", "*", "-"]
+
+
+
+
 }
