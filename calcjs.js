@@ -148,12 +148,28 @@ function main() {
     console.log("Igual");
     operation_arr.push(num);
     console.log(operation_arr)
+    showdisplay = "";
+    num = "";
     var display = document.getElementById("display");
-  }
 
-  var operadores = ["+", "-", "*", "-"]
+    operation = operation_arr[1];
+    op1 = operation_arr[0]
+    op2 = operation_arr[2]
 
+    if (operation == "+") {
+      var resultado = parseInt(op1) + parseInt(op2);
+      console.log(operation_arr)
+    } else if (operation == "-") {
+      var resultado = parseInt(op1) - parseInt(op2);
+      console.log(operation_arr)
+    } else if (operation == "*") {
+      var resultado = parseInt(op1) * parseInt(op2);
+    } else if (operation == "/") {
+      var resultado = parseInt(op1) / parseInt(op2);
+    }
 
-
-
+    display.innerHTML = resultado;
+    operation_arr.splice(0, 3);
+    console.log(operation_arr)
+    }
 }
