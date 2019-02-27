@@ -21,6 +21,7 @@ function main() {
   var mult = document.getElementById("*");
   var divi = document.getElementById("/");
   var botonequal = document.getElementById("=");
+  var dec = document.getElementById(".");
 
 
   boton1.onclick = () => {
@@ -144,6 +145,13 @@ function main() {
     display.innerHTML = showdisplay;
   }
 
+  dec.onclick = () => {
+    var valor = document.getElementById(".").value;
+    var display = document.getElementById("display");
+    num = num + valor
+    display.innerHTML = (showdisplay = showdisplay + valor);
+  }
+
   botonequal.onclick = () => {
     console.log("Igual");
     operation_arr.push(num);
@@ -157,15 +165,15 @@ function main() {
     op2 = operation_arr[2]
 
     if (operation == "+") {
-      var resultado = parseInt(op1) + parseInt(op2);
+      var resultado = parseFloat(op1) + parseFloat(op2);
       console.log(operation_arr)
     } else if (operation == "-") {
-      var resultado = parseInt(op1) - parseInt(op2);
+      var resultado = parseFloat(op1) - parseFloat(op2);
       console.log(operation_arr)
     } else if (operation == "*") {
-      var resultado = parseInt(op1) * parseInt(op2);
+      var resultado = parseFloat(op1) * parseFloat(op2);
     } else if (operation == "/") {
-      var resultado = parseInt(op1) / parseInt(op2);
+      var resultado = parseFloat(op1) / parseFloat(op2);
     }
 
     display.innerHTML = resultado;
