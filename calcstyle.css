@@ -7,7 +7,7 @@ body {
 }
 
 #mounting {
-  width: 300px;
+  width: 320px;
   height: 450px;
   border:  none;
   padding:  10px 10px 3px 15px;
@@ -23,10 +23,10 @@ body {
 }
 
 #display {
-  width: 250px;
+  width: 245px;
   height: 45px;
   background-color: white;
-  margin-left: 15px;
+  margin-left: 20px;
   margin-right: 15px;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -51,6 +51,6 @@ body {
 }
 
 .Filas {
-  margin-left: 15px;
+  margin-left: 20px;
   margin-right: 15px;
 }

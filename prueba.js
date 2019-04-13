@@ -109,6 +109,7 @@ function main() {
     console.log("rest");
     var operation = document.getElementById("-").value;
     op_elements.operation_arr.push(op_elements.num);
+    op_elements.operation_arr.push(operation);
     showdisplay.update(operation);
     op_elements.num = "";
   }
@@ -145,17 +146,21 @@ function main() {
     op_elements.num = "";
 
     operation = op_elements.operation_arr[1];
-    op1 = op_elements.operation_arr[0];
-    op2 = op_elements.operation_arr[2];
+    op1 = parseFloat(op_elements.operation_arr[0]);
+    op2 = parseFloat(op_elements.operation_arr[2]);
 
     if (operation == "+") {
-      var resultado = parseFloat(op1) + parseFloat(op2);
+      resultado = op1 + op2;
     } else if (operation == "-") {
-      var resultado = parseFloat(op1) - parseFloat(op2);
+      resultado = op1 - op2;
     } else if (operation == "*") {
-      var resultado = parseFloat(op1) * parseFloat(op2);
+      resultado = op1 * op2;
     } else if (operation == "/") {
-      var resultado = parseFloat(op1) / parseFloat(op2);
+      if (op2 == 0) {
+        resultado = "Math error"
+      } else {
+        resultado = op1 / op2;
+      }
     }
 
     console.log(resultado)
